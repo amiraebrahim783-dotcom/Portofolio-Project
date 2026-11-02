@@ -1,0 +1,650 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+@keyframes rotate{from {
+    transform: rotate(0deg);
+
+}
+
+to {transform:rotate(360deg);}
+}
+body{
+font-family: Arial, Helvetica, sans-serif;
+background-color:rgb(201, 214, 234) ;
+color: black;
+}
+#menu-btn{display: none;}
+
+#navbar {
+display: flex;
+justify-content:space-between ;
+align-items: center;
+padding: 20px 60px;
+
+}
+#navbar h2{
+font-family:'Oleo Script' ;
+}
+
+
+#navbar ul{
+display: flex;
+justify-content: space-between;
+align-items: center;
+list-style: none;
+gap:20px;
+
+}
+#navbar a{
+padding: 10px 15px;
+border-radius: 10px;
+text-decoration: none;
+color: black;
+
+}
+#navbar a:hover{
+color: rgb(98, 209, 209);
+transform: scale(1.2);
+
+}
+#contact-btn{
+border:1px solid black ;
+border-radius: 7px;
+padding: 10px 30px;
+
+}
+#contact-btn:hover{
+    background-color: black;
+    transform: scale(1.2);
+}
+#mode{
+display: none;
+
+}
+#icons img{
+cursor: pointer;
+}
+#light{
+    display: none;
+}
+#mode:checked ~ #navbar #light{
+    display: inline;
+}
+body:has(#mode:checked){
+background-color: rgba(10, 39, 68, 0.942);
+color: white;
+
+}
+body:has(#mode:checked) #navbar a{
+
+color: white;
+
+}
+body:has(#mode:checked) #navbar a:hover{
+
+color: rgb(140, 224, 252);
+transform: scale(1.2);
+
+}
+
+body:has(#mode:checked) #contact-btn:hover{
+    background-color: aliceblue;
+    transform: scale(1.2);
+}
+
+
+    body:has(#mode:checked) #contact-btn{
+        border:1px solid white ;
+    }
+#imag{
+    animation:rotate 11s linear infinite;
+}
+@keyframes rotate {
+    to{transform: rotate(360deg);}
+}
+#home{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+gap: 8px;
+margin-top: 100px;
+}
+#home span{
+background: linear-gradient( rgb(27, 186, 178)50%,white);
+background-clip: text;
+color: transparent;
+}
+#home p{
+    text-align: center;
+    width: 40%;
+}
+#home a{
+padding: 10px 15px;
+border-radius: 10px;
+text-decoration: none;
+color: black;}
+#home a:hover{
+color: rgb(98, 209, 209);
+}
+#con-btn{
+
+border:1px solid black ;
+border-radius: 7px;
+padding: 10px 30px;
+margin-top: 20px;
+
+}
+#con-btn:hover{
+ background-color: black;
+ transform: scale(1.2);
+}
+
+body:has(#mode:checked) #home a{
+
+color: white;
+
+}
+body:has(#mode:checked) #home a:hover{
+
+color: rgb(140, 224, 252);
+transform: scale(1.2);
+
+}
+
+body:has(#mode:checked) #con-btn:hover{
+    background-color: aliceblue;
+    transform: scale(1.2);
+}
+body:has(#mode:checked) #con-btn{
+        border:1px solid white ;
+    }
+#about{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+gap: 8px;
+margin-top: 150px;
+}
+#about h5{
+background: linear-gradient( rgb(27, 186, 178)50%,white);
+background-clip: text;
+color: transparent;
+}
+#about p{
+    text-align: center;
+    width: 40%;
+}
+#about a{
+padding: 10px 15px;
+border-radius: 10px;
+text-decoration: none;
+color: black;}
+
+
+#about a:hover{
+color: rgb(98, 209, 209);
+transform: scale(1.2);
+}
+#res-btn{
+
+border:1px solid black ;
+border-radius: 7px;
+padding: 10px 30px;
+margin-top: 20px;
+
+}
+#res-btn:hover{
+ background-color: black;
+ transform: scale(1.2);
+}
+
+body:has(#mode:checked) #about a{
+
+color: white;
+
+}
+body:has(#mode:checked) #about a:hover{
+
+color: rgb(140, 224, 252);
+transform: scale(1.2);
+
+}
+
+body:has(#mode:checked) #res-btn:hover{
+    background-color: aliceblue;
+    transform: scale(1.2);
+}
+body:has(#mode:checked) #res-btn{
+        border:1px solid white ;
+    }
+#services{
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+gap: 8px;
+margin-top: 150px;
+}
+#services h5{
+background: linear-gradient( rgb(27, 186, 178)50%,white);
+background-clip: text;
+color: transparent;
+}
+#container{
+display: grid;
+grid-template-columns: repeat(3,minmax(0,1fr));
+gap: 20px;
+width: 90%;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+#service1{
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+gap: 8px;
+width: 100%;
+min-width: 0;
+background-color: rgb(43, 55, 60);
+padding: 20px;
+color: white;
+}
+
+#service1 p{
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+   
+    #service2{
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+gap: 8px;
+width: 100%;
+min-width: 0;
+background-color: rgb(43, 55, 60);
+padding: 20px;
+color: white;
+}
+
+#service2 p{
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+#service3{
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+gap: 8px;
+width: 100%;
+min-width: 0;
+background-color: rgb(43, 55, 60);
+padding: 20px;
+color: white;
+}
+
+#service3 p{
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+#card {
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+gap: 8px;
+width: 100%;
+min-width: 0;
+
+}
+
+#service4 p{
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+#service4{
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+color: white;
+background-color: rgb(43, 55, 60);
+padding: 20px;
+min-width: 0;
+}
+ #service5{
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+gap: 8px;
+width: 100%;
+min-width: 0;
+background-color: rgb(43, 55, 60);
+padding: 20px;
+color: white;
+}
+
+#service5 p{
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+#projects{
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+gap: 8px;
+margin-top: 150px;
+}
+#projects h5{
+background: linear-gradient( rgb(27, 186, 178)50%,white);
+background-clip: text;
+color: transparent;
+}
+#choice{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+#projects button{
+
+border:1px solid black ;
+border-radius: 7px;
+padding: 10px 30px;
+margin-top: 20px;
+margin-bottom: 40px;
+cursor: pointer;
+background-color: inherit;
+}
+#projects button:hover{
+ background-color: black;
+ color: aqua;
+ transform: scale(1.2);
+}
+
+body:has(#mode:checked) #projects button:hover{
+    background-color: aliceblue;
+    
+    color: rgb(90, 222, 225);
+    transform: scale(1.2);
+}
+body:has(#mode:checked) #projects button{
+        border:1px solid white ;
+         color: aliceblue;
+         
+    }
+
+
+#proj-cont{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 20px;
+
+
+
+}
+
+
+#arrow{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+
+}
+#view {
+padding: 10px 15px;
+border: 1px solid black;
+border-radius: 10px;
+text-decoration: none;
+color: black;
+padding: 10px 10px;
+}
+
+
+#view:hover{
+color: rgb(98, 209, 209);
+background-color: black;
+transform: scale(1.2);
+}
+body:has(#mode:checked) #view {
+
+color: white;
+border: 1px solid white;
+
+
+}
+body:has(#mode:checked) #view:hover{
+
+color: rgb(140, 224, 252);
+background-color: aliceblue;
+transform: scale(1.2);
+
+}
+
+#contact{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+gap: 8px;
+margin-top: 150px;
+}
+
+#contact h5{
+background: linear-gradient( rgb(27, 186, 178)50%,white);
+background-clip: text;
+color: transparent;
+}
+
+#contact-form{
+    width: 400px;
+    max-width: 100%;
+}
+#contact-form input,select{
+width: 100%;
+height: 45px;
+padding: 10px;
+background-color: inherit;
+cursor: pointer;
+
+
+}
+#contact-form textarea{
+    width: 100%;
+height: 100px;
+padding: 10px;
+background-color: inherit;
+border: 1px solid;
+cursor: pointer;
+}
+
+#name-field{
+display: flex;
+    flex-direction: column;
+gap: 9px;
+}
+#email-field{
+display: flex;
+    flex-direction: column;
+gap: 9px;
+}
+#service-field{
+display: flex;
+    flex-direction: column;
+gap: 9px;
+}
+#message-field{
+display: flex;
+    flex-direction: column;
+gap: 9px;
+}
+
+
+#submit-btn{
+    
+border:1px solid black ;
+border-radius: 7px;
+padding: 10px 30px;
+margin-top: 20px;
+margin-bottom: 40px;
+cursor: pointer;
+background-color: inherit;
+}
+
+#submit-btn:hover{
+ background-color: black;
+ color: aqua;
+ transform: scale(1.2);
+}
+body:has(#mode:checked) #submit-btn:hover{
+    background-color: white;
+    color: aqua;
+    transform: scale(1.2);
+}
+body:has(#mode:checked) #submit-btn{
+        border:1px solid white ;
+        color: aliceblue;
+    }
+#gmail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px 10px;
+
+}
+#gmail:hover{
+ background-color: black;
+ color: aqua;
+ transform: scale(1.2);
+}
+body:has(#mode:checked) #gmail:hover{
+    background-color: white;
+    color: aqua;
+    transform: scale(1.2);
+}
+body:has(#mode:checked) #gmail{
+        border:1px solid white ;
+        color: aliceblue;
+        
+    }
+
+
+#work{
+display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px;
+margin-top: 100px;
+
+
+}
+#social_media{
+display: flex;
+flex-direction: row;
+gap: 10px;
+
+}
+#social_media:hover{
+transform: scale(1.2);
+
+
+
+}
+
+#media{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+ padding: 40px 40px;
+border-top: 1px solid black;
+
+
+}
+@media(max-width:768px){
+#navbar ul {
+    display: none;
+}
+#menu-btn{
+    display: block;
+
+
+}
+#container{
+grid-template-columns: 1fr;
+
+
+}
+#service4{
+grid-column: span 1;
+flex-direction: column;
+
+
+}
+
+
+
+
+ #choice {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #choice button {
+        padding: 8px 12px;
+        margin: 5px;
+    }
+
+    #proj-cont {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 20px;
+    }
+
+    #proj-cont > div {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #proj-cont > div > img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+}
+
+
